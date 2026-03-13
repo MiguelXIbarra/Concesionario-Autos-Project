@@ -8,7 +8,6 @@ return new class extends Migration
 {
     public function up(): void
     {
-        // Tabla principal de usuarios con los campos de tu diseño
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('role')->nullable();
@@ -21,7 +20,6 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        // Tablas auxiliares necesarias para Laravel
         Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->string('email')->primary();
             $table->string('token');
